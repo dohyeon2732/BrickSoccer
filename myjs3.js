@@ -61,7 +61,9 @@ $(function () {
         gamereset();
         console.log("level: " + level);
 
+
         $('#count').text('').css('display', 'none');
+        $('#lasttext').text('').css('display','none');
         $('#setting-page').css({ display: 'none' });
         $('#third').css({ display: 'none' });
         $('#mode').css({ display: 'none' });
@@ -127,8 +129,6 @@ $(function () {
     var ballimg = new Image();
     ballimg.src = 'ball.png';
     function drawBall() {
-        //공 그리기
-
         con.beginPath();
         con.drawImage(ballimg, x1p, y1p, ballRadius, ballRadius);
         con.closePath();
@@ -136,7 +136,6 @@ $(function () {
     var shoeimg = new Image();
     shoeimg.src = 'shoe.png';
     function drawPaddle() {
-
         con.beginPath();
         con.drawImage(shoeimg, paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
         con.closePath();
