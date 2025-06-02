@@ -278,13 +278,14 @@ window.addEventListener('keydown', function (event) {
 window.addEventListener('keyup', function (event) {
     delete keys[event.key];
 });
+var leftBarImg = new Image();
+leftBarImg.src = 'player1.png';
+
+var rightBarImg = new Image();
+rightBarImg.src = 'player2.png';
 
 function movePlayer_2p() {
-    var leftBarImg = new Image();
-    leftBarImg.src = 'player1.png';
 
-    var rightBarImg = new Image();
-    rightBarImg.src = 'player2.png';
 
     if ((keys['w'] && y1 > 0) || (keys['ㅈ'] && y1 > 0)) {
         y1 -= 5;
@@ -315,10 +316,10 @@ var ran = Math.floor(Math.random() * 3) + 1;
 if ((Math.floor(Math.random() * 2) + 1) % 2) ran = -ran;
 var vx = ran,
     vy = 3;
-
+var ballimg = new Image();
+ballimg.src = 'ball.png';
 function ball() {
-    var ballimg = new Image();
-    ballimg.src = 'ball.png';
+
 
     if (by < 0) by += 10;
     if (by > h) by -= 10;
@@ -431,13 +432,11 @@ function movebrick_2p() {
         }
     }
 }
-
+var rightImg = new Image();
+rightImg.src = 'player2.png';
+var leftImg = new Image();
+leftImg.src = 'player1.png';
 function printbrick_2p() {
-    var rightImg = new Image();
-    rightImg.src = 'player2.png';
-    var leftImg = new Image();
-    leftImg.src = 'player1.png';
-
     for (var i = 0; i < brickrow; i++) {
         for (var j = 0; j < brickcol; j++) {
             var bbx = bricks[i][j].x;

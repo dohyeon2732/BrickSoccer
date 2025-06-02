@@ -59,7 +59,9 @@ $(function () {
     function startgame() {
         brickreset1p();
         gamereset();
+        console.log("level: " + level);
 
+        $('#count').text('').css('display', 'none');
         $('#setting-page').css({ display: 'none' });
         $('#third').css({ display: 'none' });
         $('#mode').css({ display: 'none' });
@@ -122,26 +124,26 @@ $(function () {
             $('#gold').css('display', 'block');
         }
     }
-
+    var ballimg = new Image();
+    ballimg.src = 'ball.png';
     function drawBall() {
         //공 그리기
-        var ballimg = new Image();
-        ballimg.src = 'ball.png';
+
         con.beginPath();
         con.drawImage(ballimg, x1p, y1p, ballRadius, ballRadius);
         con.closePath();
     }
-
+    var shoeimg = new Image();
+    shoeimg.src = 'shoe.png';
     function drawPaddle() {
-        var ballimg = new Image();
-        ballimg.src = 'shoe.png';
+
         con.beginPath();
-        con.drawImage(ballimg, paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+        con.drawImage(shoeimg, paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
         con.closePath();
     }
+    var brickImage = new Image();
+    brickImage.src = 'player1.png';
     function drawBricks() {
-        var brickImage = new Image();
-        brickImage.src = 'player1.png';
         for (var c = 0; c < brickColumnCount; c++) {
             for (var r = 0; r < brickRowCount; r++) {
                 if (bricks1p[c][r].status == 1) {
