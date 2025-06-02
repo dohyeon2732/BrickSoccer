@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="mycss.css" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="myjs.js"></script>
+        <script src="myjs3.js"></script>
+        <title>blockbreak</title>
+    </head>
+
+    <body onload="main()">
+        <input name="1" type="radio" id="levelradio1" checked />
+        <input name="1" type="radio" id="levelradio2" />
+        <input name="1" type="radio" id="levelradio3" />
+
+        <audio id="hit" src="hit.mp3" class="eff"></audio>
+        <audio id="dugu" src="dugu.mp3" class="eff"></audio>
+        <audio id="congra" src="congra.mp3" class="eff"></audio>
+        <audio src="radio.mp3" id="backaudio" muted autoplay loop></audio>
+        <audio src="opening.mp3" id="opening" autoplay loop></audio>
+        <img src="main1.png" id="background" />
+        <audio src="ho.mp3" id="ho" class="eff" muted></audio>
+        <canvas id="canvas" width="1200" height="675"></canvas>
+        <img src="trophy.png" id="gold" />
+        <div id="lasttext">1</div>
+
+        <div id="story">story</div>
+        <div id="click">Click anywhere to start.</div>
+        <div id="third">
+            <div id="back">BACK</div>
+            <div id="start">START</div>
+        </div>
+        <div id="topboard">
+            <div id="player">
+                <div id="p1">Player1</div>
+                <div id="p2">Player2</div>
+            </div>
+            <div id="score">
+                <div id="score1">Score: 0</div>
+                <div id="score2">Score: 0</div>
+            </div>
+            <div id="brick">
+                <div id="brick1">Crash: 0</div>
+                <div id="brick2">Crash: 0</div>
+            </div>
+        </div>
+        <div id="count">3</div>
+
+        <div id="mode">
+            <div id="first">
+                <img src="single.png" class="first" id="single" alt="" />
+                <img src="double.png" class="first" id="double" alt="" />
+            </div>
+            <div id="second">
+                <img src="rule.png" class="second" id="rule" />
+                <img src="settings.png" class="second" id="settings" />
+                <img src="madeby.png" class="second" id="madeby" />
+            </div>
+        </div>
+
+        <div id="setting-page">
+            <img id="level" src="level.png" />
+            <div id="levelradio">
+                <label for="levelradio1"><img class="levelimg" id="level1" src="level1.png" /></label>
+                <label for="levelradio2"><img class="levelimg" id="level2" src="level2.png" /></label>
+                <label for="levelradio3"><img class="levelimg" id="level3" src="level3.png" /></label>
+            </div>
+            <br /><br />
+            <div>
+                <img id="bgm" src="bgm.png" />
+                <img src="volmute.png" id="volume" />
+            </div>
+            <div>
+                <img id="effect" src="effect.png" />
+                <img src="vol.png" id="volumeeff" />
+            </div>
+        </div>
+    </body>
+</html>
